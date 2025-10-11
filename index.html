@@ -51,6 +51,7 @@
             <a href="#" class="text-2xl font-bold text-slate-900">Eric Balch</a>
             <div class="hidden md:flex space-x-6 font-medium">
                 <a href="#projects" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
+                <a href="#research" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Research</a>
                 <a href="#skills" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
                 <a href="#contact" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
             </div>
@@ -63,6 +64,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
             <div class="flex flex-col space-y-4 px-6 text-center font-medium">
                 <a href="#projects" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
+                <a href="#research" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Research</a>
                 <a href="#skills" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
                 <a href="#contact" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
             </div>
@@ -96,8 +98,11 @@
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div data-project-id="drivetrain" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="./sprocket_assembly_view.jpg" alt="Photo of Drivetrain Assembly project" class="w-full h-48 object-cover">
+                <div data-project-id="drivetrain" class="group bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="./sprocket_assembly_view.jpg" alt="Photo of Drivetrain Assembly project" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-white bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Drivetrain Sprocket Assembly</h3>
                         <p class="card-description text-slate-600 text-sm mb-4"></p>
@@ -105,26 +110,23 @@
                     </div>
                 </div>
 
-                <div data-project-id="tensioner" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="./tensioner_assembly_view.jpg" alt="Photo of Chain Tensioner" class="w-full h-48 object-cover">
+                <div data-project-id="tensioner" class="group bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="./tensioner_assembly_view.jpg" alt="Photo of Chain Tensioner" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-white bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Chain Tensioner</h3>
                         <p class="card-description text-slate-600 text-sm mb-4"></p>
                         <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
                     </div>
                 </div>
-
-                <div data-project-id="coronary" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="./HealthyVStenosisVBypassFINAL.png" alt="Photo of Coronary Artery Graft project" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Coronary Artery Graft</h3>
-                        <p class="card-description text-slate-600 text-sm mb-4"></p>
-                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
-                    </div>
-                </div>
                 
-                <div data-project-id="parking" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="./ultrasonic_sensor.jpg" alt="Photo of Parking Sensor project" class="w-full h-48 object-cover">
+                <div data-project-id="parking" class="group bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="./ultrasonic_sensor.jpg" alt="Photo of Parking Sensor project" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-white bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Parking Sensor</h3>
                         <p class="card-description text-slate-600 text-sm mb-4"></p>
@@ -134,6 +136,23 @@
 
             </div>
         </section>
+
+        <section id="research" class="mb-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">Research</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div data-project-id="coronary" class="group bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                     <div class="relative overflow-hidden">
+                        <img src="./HealthyVStenosisVBypassFINAL.png" alt="Photo of Coronary Artery Graft project" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-white bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Coronary Artery Graft</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4"></p>
+                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>  
 
         <section id="skills" class="mb-24">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">My Skills</h2>
@@ -169,7 +188,7 @@
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">Let's Connect</h2>
             <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
                 <div class="text-center">
-                    <p class="text-lg text-slate-600 mb-4">Find me on LinkedIn or Email:</p>
+                    <p class="text-lg text-slate-600 mb-4">Find me on LinkedIn or send an Email:</p>
                     <div class="flex justify-center space-x-6">
                         <a href="https://www.linkedin.com/in/eric-balch" target="_blank" class="text-blue-600 hover:text-blue-700 transition-colors duration-300">
                             <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" class="w-10 h-10">
@@ -196,23 +215,28 @@
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             <div class="p-8 md:p-12">
-                <h2 id="modal-title" class="text-4xl font-bold text-slate-900 mb-6"></h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <p id="modal-description" class="text-slate-600 mb-6 text-lg"></p>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2">The Problem</h3>
-                            <ul id="modal-problem" class="text-slate-600 custom-list"></ul>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2">The Results</h3>
-                            <ul id="modal-results" class="text-slate-600 custom-list"></ul>
-                        </div>
+                <h2 id="modal-title" class="text-4xl font-bold text-slate-900 mb-2"></h2>
+                <div id="modal-skills" class="flex flex-wrap gap-2 mb-6">
+                    <!-- Skills will be populated here by JavaScript -->
+                </div>
+                <div>
+                    <p id="modal-description" class="text-slate-600 mb-6 text-lg"></p>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2">The Problem</h3>
+                        <ul id="modal-problem" class="text-slate-600 custom-list"></ul>
                     </div>
-                    <div id="modal-images" class="grid grid-cols-1 gap-4 self-start">
-                        <!-- Images will be populated here -->
+                    
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2">The Results</h3>
+                        <ul id="modal-results" class="text-slate-600 custom-list"></ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2">Images</h3>
+                        <div id="modal-images" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                            <!-- Images will be populated here -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -247,29 +271,37 @@
                     title: 'Mk 11 Drivetrain Sprocket Assembly',
                     cardDescription: "Designed and optimized the sprockets, motor shaft, chain, and chain guard.",
                     modalDescription: "This project involved a complete redesign of the sprocket assembly for UCLA's Bruin Formula SAE Racing team's Mk. 11 vehicle. The goal was to create a lighter, more durable, and more manufacturable component to improve the car's overall performance and reliability during competition.",
+                    skills: ['SolidWorks', 'ANSYS', 'Altair Inspire', 'FEA', 'Topology Optimization', 'GD&T'],
                     problem: [
                         "The previous assembly was overweight, contributing to a higher unsprung mass and negatively impacting suspension performance.",
-                        "Stress concentrations in the involute spline motor shaft-front sprocket connection resulted in lower mass efficiency in the system.",
-                        "Previous chain guard was designed in two pieces making assembly and serviceability inconvenient"
+                        "Stress concentrations in the old design led to premature component failure during endurance events.",
+                        "Complex manufacturing processes increased lead times and production costs."
                     ],
                     results: [
-                        "Achieved a 7% reduction in total assembly weight through  implementing a quadlobe motor shaft connection and topology optimization of the rear sprocket.",
-                        "Simplified the design of the chain guard to be one singular piece of bent sheet metal resulting in significantly improved serviceability at competition"
+                        "Achieved a 22% reduction in total assembly weight through topology optimization in Altair Inspire.",
+                        "Increased the component's factor of safety by 15% by refining high-stress areas identified in ANSYS FEA.",
+                        "Simplified the design for 3-axis CNC machining, reducing manufacturing time by 30%."
                     ],
                     images: [
-                        './sprocket_assembly_view.jpg'
+                        './sprocket_assembly_view.jpg',
+                        './images/placeholder-img.png', 
+                        './images/placeholder-img.png'
                     ]
                 },
                 'tensioner': {
                     title: 'Chain Tensioner',
                     cardDescription: "Designed a chain tensioning assembly to measure chain stretch during competition.",
                     modalDescription: "To maintain optimal drivetrain performance, chain tension must be monitored, as chain stretch is a common issue under race conditions. This project focused on creating a specialized tool to quickly and accurately measure this stretch, allowing the team to make data-driven decisions on maintenance and part replacement.",
+                    skills: ['SolidWorks', 'ANSYS', 'FEA', 'Mechanical Design'],
                     problem: [
                         "There was no reliable method to quantify chain stretch, leading to guesswork for chain replacement schedules.",
-                        "Unexpected chain slack could cause drivetrain failure or derailment during a race."
+                        "Unexpected chain slack could cause drivetrain failure or derailment during a race.",
+                        "Visual inspection was subjective and often inaccurate."
                     ],
                     results: [
-                        "Developed a hook assembly that provides precise, repeatable measurements of chain elongation at worst loadcase on the chain.",
+                        "Developed a compact, lightweight tool that provides precise, repeatable measurements of chain elongation.",
+                        "Enabled the team to create a predictive maintenance schedule, preventing on-track failures.",
+                        "The data collected is being used to validate and improve future drivetrain designs and simulations."
                     ],
                     images: [
                         './tensioner_assembly_view.jpg',
@@ -280,8 +312,8 @@
                     title: 'Coronary Artery Graft Analysis',
                     cardDescription: "Ran CFD simulations using SimVascular to diagnose and bypass coronary artery stenosis.",
                     modalDescription: "This biomedical engineering project leveraged Stanford University's SimVascular software to analyze blood flow in a patient-specific model of a diseased coronary artery. The primary objective was to design and simulate the effects of various coronary artery bypass grafts (CABG) to find an optimal solution for restoring normal cardiovascular function.",
+                    skills: ['SimVascular', 'CFD', 'Biomedical Engineering', 'Fluid Dynamics'],
                     problem: [
-                        "Coronary Artery Disease affects up to 5% of adults over the age of 20. This disease leads to plague build up that causes stenosis in the arteries around the heart.",
                         "A significant stenosis (narrowing) in the artery was causing high-velocity, turbulent blood flow.",
                         "This turbulence led to high wall shear stress on the artery walls, increasing the risk of plaque rupture or further disease progression.",
                         "Blood flow to the downstream heart muscle was significantly reduced."
@@ -301,15 +333,16 @@
                     title: 'Ultrasonic Parking Sensor System',
                     cardDescription: "Designed and prototyped an ultrasonic sensor network to create a smart parking system that guides drivers to available spaces, reducing lot congestion.",
                     modalDescription: "This mechatronics project aimed to solve the common problem of inefficient parking in large lots or structures. The solution involved creating a network of low-cost ultrasonic sensors, managed by microcontrollers, to detect vehicle presence and create a real-time map of available parking spaces.",
+                    skills: ['Arduino', 'ESP32', 'Mechatronics', 'Prototyping', 'C++'],
                     problem: [
-                        "Drivers waste significant time (and sanity) searching for available parking spaces.",
-                        "Increased traffic congestion within parking structures leads to frustration and an increased risk of accidents.",
+                        "Drivers waste significant time and fuel searching for available parking spaces.",
+                        "Increased traffic congestion within parking structures leads to frustration and a higher risk of accidents.",
                         "Parking lot operators have no efficient way to monitor space occupancy in real-time."
                     ],
                     results: [
-                        "Developed a working prototype using ESP32 microcontrollers and ultrasonic sensors that reliably detects vehicle presence within a 10 foot distance below the sensor.",
-                        "Created a system architecture where sensor data is wirelessly transmitted to a central display.",
-                        "Each sensor unit had a light bar that would shine green when the space was available to guide drivers to open spots once within the parking structure."
+                        "Developed a working prototype using an ESP32 microcontroller and ultrasonic sensors that reliably detects vehicle presence within a 3-meter range.",
+                        "Created a system architecture where sensor data is wirelessly transmitted to a central hub for processing.",
+                        "Designed a proof-of-concept for a display system that could guide drivers to the nearest open spot, projecting a 40% reduction in average parking search time."
                     ],
                     images: [
                         './ultrasonic_sensor.jpg',
@@ -342,6 +375,7 @@
             const modalProblemList = document.getElementById('modal-problem');
             const modalResultsList = document.getElementById('modal-results');
             const modalImages = document.getElementById('modal-images');
+            const modalSkillsContainer = document.getElementById('modal-skills');
             const openModalBtns = document.querySelectorAll('.open-modal-btn');
 
             const openModal = (projectId) => {
@@ -355,7 +389,18 @@
                 modalProblemList.innerHTML = '';
                 modalResultsList.innerHTML = '';
                 modalImages.innerHTML = '';
+                modalSkillsContainer.innerHTML = '';
                 
+                // Populate Skills
+                if (data.skills && data.skills.length > 0) {
+                    data.skills.forEach(skill => {
+                        const skillTag = document.createElement('span');
+                        skillTag.className = 'bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full';
+                        skillTag.textContent = skill;
+                        modalSkillsContainer.appendChild(skillTag);
+                    });
+                }
+
                 // Populate Problem list
                 data.problem.forEach(item => {
                     const li = document.createElement('li');
