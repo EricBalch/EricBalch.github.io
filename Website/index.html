@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Balch Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; /* slate-100 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; /* slate-300 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; /* slate-400 */
+        }
+        /* Custom list style for bullet points */
+        .custom-list li {
+            position: relative;
+            padding-left: 1.5rem; /* Space for the custom bullet */
+            margin-bottom: 0.5rem;
+        }
+        .custom-list li::before {
+            content: '■'; /* Custom bullet character */
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #3b82f6; /* blue-500 */
+            font-size: 0.8rem;
+            line-height: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <header class="bg-white sticky top-0 z-40 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-900">Eric Balch</a>
+            <div class="hidden md:flex space-x-6 font-medium">
+                <a href="#projects" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
+                <a href="#skills" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
+                <a href="#contact" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-slate-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <div class="flex flex-col space-y-4 px-6 text-center font-medium">
+                <a href="#projects" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
+                <a href="#skills" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
+                <a href="#contact" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section id="hero" class="flex flex-col-reverse md:flex-row items-center justify-between mb-24">
+            <div class="md:w-1/2 text-center md:text-left mt-10 md:mt-0">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-4">
+                    Eric Balch
+                    <span class="block text-blue-600 text-3xl sm:text-4xl lg:text-5xl">Mechanical Engineering Student</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-lg mx-auto md:mx-0">
+                    Passionate and detail-oriented mechanical engineering student with a dedicated, interdisciplinary interest in the automotive, aerospace, and biomedical industries. I'm excited by opportunities to turn complex ideas into tangible, functional designs.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 font-semibold">View Projects</a>
+                    <a href="#contact" class="px-6 py-3 bg-slate-200 text-slate-800 rounded-lg shadow-md hover:bg-slate-300 transition-colors duration-300 font-semibold">Get In Touch</a>
+                    <a href="#" id="open-resume-btn" class="px-6 py-3 bg-slate-200 text-slate-800 rounded-lg shadow-md hover:bg-slate-300 transition-colors duration-300 font-semibold">View Resume 📝</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg border-4 border-white">
+                    <img src="./eric_balch_profile.JPG" alt="Eric Balch's Photo" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mb-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div data-project-id="drivetrain" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="./sprocket_assembly_view.jpg" alt="Photo of Drivetrain Assembly project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Drivetrain Sprocket Assembly</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4"></p>
+                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
+                    </div>
+                </div>
+
+                <div data-project-id="tensioner" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="./tensioner_assembly_view.jpg" alt="Photo of Chain Tensioner" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Chain Tensioner</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4"></p>
+                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
+                    </div>
+                </div>
+
+                <div data-project-id="coronary" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="./HealthyVStenosisVBypassFINAL.png" alt="Photo of Coronary Artery Graft project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Coronary Artery Graft</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4"></p>
+                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
+                    </div>
+                </div>
+                
+                <div data-project-id="parking" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="./ultrasonic_sensor.jpg" alt="Photo of Parking Sensor project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Parking Sensor</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4"></p>
+                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="mb-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">My Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
+                    <h4 class="text-lg font-semibold text-slate-900">Engineering Software</h4>
+                    <p class="text-sm text-slate-600 mt-2">SolidWorks, Fusion 360, ANSYS Workbench, Altair Inspire</p>
+                </div> 
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
+                    <h4 class="text-lg font-semibold text-slate-900">Programming</h4>
+                    <p class="text-sm text-slate-600 mt-2">Python, MATLAB, Java</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
+                    <h4 class="text-lg font-semibold text-slate-900">Analysis</h4>
+                    <p class="text-sm text-slate-600 mt-2">Finite Element Analysis (FEA), Computation Fluid Dynamics (CFD), Topology Optimization</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
+                    <h4 class="text-lg font-semibold text-slate-900">Manufacturing</h4>
+                    <p class="text-sm text-slate-600 mt-2">3D Printing, Mill, Lathe</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
+                    <h4 class="text-lg font-semibold text-slate-900">Mechatronics</h4>
+                    <p class="text-sm text-slate-600 mt-2">Arduino, ESP32 Microcontrollers, Ultrasonic Sensors</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
+                    <h4 class="text-lg font-semibold text-slate-900">Professional Software</h4>
+                    <p class="text-sm text-slate-600 mt-2">Microsoft Office Suite (Word, Excel, Teams)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">Let's Connect</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
+                <div class="text-center">
+                    <p class="text-lg text-slate-600 mb-4">Find me on LinkedIn or Email:</p>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.linkedin.com/in/eric-balch" target="_blank" class="text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" class="w-10 h-10">
+                        </a>
+                        <a href="mailto:erichbalch@gmail.com?subject=Reaching Out From Your Portfolio" class="text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                            <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Email" class="w-10 h-10">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Eric Balch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div id="modal-content" class="bg-white rounded-lg shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-slate-500 hover:text-slate-800 transition-colors z-10">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="p-8 md:p-12">
+                <h2 id="modal-title" class="text-4xl font-bold text-slate-900 mb-6"></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <p id="modal-description" class="text-slate-600 mb-6 text-lg"></p>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2">The Problem</h3>
+                            <ul id="modal-problem" class="text-slate-600 custom-list"></ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2">The Results</h3>
+                            <ul id="modal-results" class="text-slate-600 custom-list"></ul>
+                        </div>
+                    </div>
+                    <div id="modal-images" class="grid grid-cols-1 gap-4 self-start">
+                        <!-- Images will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-lg shadow-2xl w-full max-w-4xl h-[90vh] flex flex-col relative p-2">
+            <button id="close-resume-btn" class="absolute -top-3 -right-3 text-white bg-slate-800 rounded-full p-1 hover:bg-slate-600 transition-colors z-10" aria-label="Close resume viewer">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <iframe src="./Eric Balch - Resume.pdf#navpanes=0" class="w-full h-full border-8 border-white rounded-lg">
+                Your browser does not support PDFs. Please download the PDF to view it: <a href="./Eric Balch - Resume.pdf">Download PDF</a>.
+            </iframe>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Logic ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Updated projectData with Problem and Results ---
+            const projectData = {
+                'drivetrain': {
+                    title: 'Mk 11 Drivetrain Sprocket Assembly',
+                    cardDescription: "Designed and optimized the sprockets, motor shaft, chain, and chain guard.",
+                    modalDescription: "This project involved a complete redesign of the sprocket assembly for UCLA's Bruin Formula SAE Racing team's Mk. 11 vehicle. The goal was to create a lighter, more durable, and more manufacturable component to improve the car's overall performance and reliability during competition.",
+                    problem: [
+                        "The previous assembly was overweight, contributing to a higher unsprung mass and negatively impacting suspension performance.",
+                        "Stress concentrations in the involute spline motor shaft-front sprocket connection resulted in lower mass efficiency in the system.",
+                        "Previous chain guard was designed in two pieces making assembly and serviceability inconvenient"
+                    ],
+                    results: [
+                        "Achieved a 7% reduction in total assembly weight through  implementing a quadlobe motor shaft connection and topology optimization of the rear sprocket.",
+                        "Simplified the design of the chain guard to be one singular piece of bent sheet metal resulting in significantly improved serviceability at competition"
+                    ],
+                    images: [
+                        './sprocket_assembly_view.jpg'
+                    ]
+                },
+                'tensioner': {
+                    title: 'Chain Tensioner',
+                    cardDescription: "Designed a chain tensioning assembly to measure chain stretch during competition.",
+                    modalDescription: "To maintain optimal drivetrain performance, chain tension must be monitored, as chain stretch is a common issue under race conditions. This project focused on creating a specialized tool to quickly and accurately measure this stretch, allowing the team to make data-driven decisions on maintenance and part replacement.",
+                    problem: [
+                        "There was no reliable method to quantify chain stretch, leading to guesswork for chain replacement schedules.",
+                        "Unexpected chain slack could cause drivetrain failure or derailment during a race."
+                    ],
+                    results: [
+                        "Developed a hook assembly that provides precise, repeatable measurements of chain elongation at worst loadcase on the chain.",
+                    ],
+                    images: [
+                        './tensioner_assembly_view.jpg',
+                        './tensioner_hook_view.jpg'
+                    ]
+                },
+                'coronary': {
+                    title: 'Coronary Artery Graft Analysis',
+                    cardDescription: "Ran CFD simulations using SimVascular to diagnose and bypass coronary artery stenosis.",
+                    modalDescription: "This biomedical engineering project leveraged Stanford University's SimVascular software to analyze blood flow in a patient-specific model of a diseased coronary artery. The primary objective was to design and simulate the effects of various coronary artery bypass grafts (CABG) to find an optimal solution for restoring normal cardiovascular function.",
+                    problem: [
+                        "Coronary Artery Disease affects up to 5% of adults over the age of 20. This disease leads to plague build up that causes stenosis in the arteries around the heart.",
+                        "A significant stenosis (narrowing) in the artery was causing high-velocity, turbulent blood flow.",
+                        "This turbulence led to high wall shear stress on the artery walls, increasing the risk of plaque rupture or further disease progression.",
+                        "Blood flow to the downstream heart muscle was significantly reduced."
+                    ],
+                    results: [
+                        "Successfully designed a bypass graft that restored blood flow to healthy, laminar patterns.",
+                        "CFD analysis showed a 75% reduction in wall shear stress in the critical areas downstream of the stenosis.",
+                        "The simulation predicted a 90% restoration of blood flow volume to the affected region of the heart."
+                    ],
+                    images: [
+                        './HealthyVStenosisVBypassFINAL.png',
+                        './SimVascular Steady Flow Models.png',
+                        './SimVascular Avg Pressure Models.png', 
+                    ]
+                },
+                'parking': {
+                    title: 'Ultrasonic Parking Sensor System',
+                    cardDescription: "Designed and prototyped an ultrasonic sensor network to create a smart parking system that guides drivers to available spaces, reducing lot congestion.",
+                    modalDescription: "This mechatronics project aimed to solve the common problem of inefficient parking in large lots or structures. The solution involved creating a network of low-cost ultrasonic sensors, managed by microcontrollers, to detect vehicle presence and create a real-time map of available parking spaces.",
+                    problem: [
+                        "Drivers waste significant time (and sanity) searching for available parking spaces.",
+                        "Increased traffic congestion within parking structures leads to frustration and an increased risk of accidents.",
+                        "Parking lot operators have no efficient way to monitor space occupancy in real-time."
+                    ],
+                    results: [
+                        "Developed a working prototype using ESP32 microcontrollers and ultrasonic sensors that reliably detects vehicle presence within a 10 foot distance below the sensor.",
+                        "Created a system architecture where sensor data is wirelessly transmitted to a central display.",
+                        "Each sensor unit had a light bar that would shine green when the space was available to guide drivers to open spots once within the parking structure."
+                    ],
+                    images: [
+                        './ultrasonic_sensor.jpg',
+                        './ultrasonic_sensor_2.jpg',
+                        './ultrasonic_sensor_3.jpg'
+                    ]
+                }
+            };
+
+            const populateProjectCards = () => {
+                const projectCards = document.querySelectorAll('[data-project-id]');
+                projectCards.forEach(card => {
+                    const projectId = card.dataset.projectId;
+                    const projectInfo = projectData[projectId];
+                    if (projectInfo) {
+                        const descriptionElement = card.querySelector('.card-description');
+                        if (descriptionElement) {
+                            descriptionElement.textContent = projectInfo.cardDescription;
+                        }
+                    }
+                });
+            };
+            populateProjectCards();
+
+            // --- Project Modal Logic ---
+            const modal = document.getElementById('project-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+            const modalProblemList = document.getElementById('modal-problem');
+            const modalResultsList = document.getElementById('modal-results');
+            const modalImages = document.getElementById('modal-images');
+            const openModalBtns = document.querySelectorAll('.open-modal-btn');
+
+            const openModal = (projectId) => {
+                const data = projectData[projectId];
+                if (!data) return;
+
+                modalTitle.textContent = data.title;
+                modalDescription.textContent = data.modalDescription;
+                
+                // Clear previous content
+                modalProblemList.innerHTML = '';
+                modalResultsList.innerHTML = '';
+                modalImages.innerHTML = '';
+                
+                // Populate Problem list
+                data.problem.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    modalProblemList.appendChild(li);
+                });
+
+                // Populate Results list
+                data.results.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    modalResultsList.appendChild(li);
+                });
+                
+                // Populate images
+                data.images.forEach(src => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = data.title;
+                    img.className = 'w-full rounded-lg shadow-md object-cover';
+                    modalImages.appendChild(img);
+                });
+
+                modal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            };
+
+            const closeModal = () => {
+                modal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            };
+
+            openModalBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const projectCard = btn.closest('[data-project-id]');
+                    const projectId = projectCard.dataset.projectId;
+                    openModal(projectId);
+                });
+            });
+
+            closeModalBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // --- Resume Modal Logic ---
+            const openResumeBtn = document.getElementById('open-resume-btn');
+            const resumeModal = document.getElementById('resume-modal');
+            const closeResumeBtn = document.getElementById('close-resume-btn');
+
+            const openResumeModal = () => {
+                resumeModal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            };
+
+            const closeResumeModal = () => {
+                resumeModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            };
+
+            openResumeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openResumeModal();
+            });
+
+            closeResumeBtn.addEventListener('click', closeResumeModal);
+            
+            resumeModal.addEventListener('click', (e) => {
+                if (e.target === resumeModal) {
+                    closeResumeModal();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    if (!modal.classList.contains('hidden')) {
+                        closeModal();
+                    }
+                    if (!resumeModal.classList.contains('hidden')) {
+                        closeResumeModal();
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
