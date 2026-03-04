@@ -151,6 +151,19 @@
                         <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
                     </div>
                 </div>
+
+                <div data-project-id="endoscope" class="group bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                     <div class="relative overflow-hidden">
+                        <img src="" alt="Photo of endoscope prototype project" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-white bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Endoscope Development Project</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4"></p>
+                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
+                    </div>
+                </div>
+
             </div>
         </section>  
 
@@ -275,7 +288,7 @@
                     title: 'Mk 11 Drivetrain Sprocket Assembly',
                     cardDescription: "Designed and optimized the sprockets, motor shaft, chain, and chain guard.",
                     modalDescription: "This project involved a complete redesign of the sprocket assembly for UCLA's Bruin Formula SAE Racing team's Mk. 11 vehicle. The goal was to create a lighter, more manufacturable, and more serviceable subassembly to improve the car's overall performance and reliability during competition.",
-                    skills: ['SolidWorks', 'ANSYS', 'Altair Inspire', 'FEA', 'Topology Optimization', 'GD&T'],
+                    skills: ['SolidWorks', 'ANSYS', 'Altair Inspire', 'FEA', 'Topology Optimization', 'GD&T', 'DFM'],
                     problem: [
                         "The previous assembly wasn't fully optimized for weight savings, contributing to a higher unsprung mass and negatively impacting performance",
                         "Stress concentrations in the previous keyed spline motor shaft design led to increased component weight",
@@ -360,6 +373,29 @@
                         './HealthyVStenosisVBypassFINAL.png',
                         './SimVascular Steady Flow Models.png',
                         './SimVascular Avg Pressure Models.png', 
+                    ],
+                    videos: []
+                },
+                'endoscope': {
+                    title: 'Endoscope Development Project',
+                    cardDescription: "Developed innovative new endoscope tool design, decoupling the control of the camera and accessories.",
+                    modalDescription: "This biomedical engineering project involved research, design, prototyping, and testing of an independently controlled endoscope tool assembly, capable of fitting into the working channel of currently existing endoscope and colonoscope designs.",
+                    skills: ['SolidWorks', 'Rapid-Prototyping', 'Biomedical Engineering', 'Materials Research'],
+                    problem: [
+                        "Colonoscopes and endoscopes are designed with the camera sitting vertically above the working channel that tools (snares, forceps, etc.) are passed through, with the tool slaved to the controls of the entire scope head.",
+                        "When polyps are located in orientations other than at the bottom of the camera's view, the operator of the scope must either torque the entire scope to align properly with the polyp, or attempt to resect the polyp blind.",
+                        "Results in repetitive stress injuries for surgeons and unsuccessful or ineffective polyp resections"
+                    ],
+                    actions: [
+                        "In the process of developing a tool design with independent manipulation controls from the scope using SolidWorks",
+                        "Researching industry solutions for extremely small scale wire-guided manipulation of biomedical devices (Endoscopes, Colonoscopes, Catheters)",
+                        "Designing not-to-scale prototype of the product in SolidWorks and manufacturing the tool using purchased components and 3D printed elements" 
+                    ],
+                    results: [
+                        "Developed a ~3x scale functional prototype as a proof of concept for the device",
+                        "NEXT STEPS: Reach out to industrial manufacturers to determine solutions for to-scale manufacturing of design"
+                    ],
+                    images: [ 
                     ],
                     videos: []
                 },
