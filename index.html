@@ -107,7 +107,19 @@
         <section id="projects" class="mb-24">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
+
+                <div data-project-id="mk12" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
+                    <div class="relative overflow-hidden">
+                        <div class="w-full h-48 bg-slate-200" aria-hidden="true"></div>
+                        <div class="absolute top-0 inset-x-0 bg-slate-800 text-white text-sm font-semibold text-center py-2">In Progress</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Mk. 12 Drivetrain Lead</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4 min-h-[5rem]">As the Drivetrain Lead on Bruin Formula Racing at UCLA, I owned the cradle-to-grave development of the drivetrain subsystem</p>
+                        <span class="inline-block text-blue-600 font-semibold">View Details &rarr;</span>
+                    </div>
+                </div>
+
                 <div data-project-id="drivetrain" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
                     <div class="relative overflow-hidden">
                         <img src="./sprocket_assembly_view3.png" alt="Drivetrain sprocket assembly" class="w-full h-48 object-cover">
@@ -247,19 +259,19 @@
                 <div id="modal-skills" class="flex flex-wrap gap-2 mb-6">
                     </div>
                 <div>
-                    <p id="modal-description" class="text-slate-600 mb-6 text-lg"></p>
+                    <p id="modal-description" class="text-slate-600 mb-6 text-lg whitespace-pre-line"></p>
                     
-                    <div class="mb-6">
+                    <div id="modal-problem-section" class="mb-6">
                         <h3 class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2">The Problem</h3>
                         <ul id="modal-problem" class="text-slate-600 custom-list"></ul>
                     </div>
 
-                    <div class="mb-6">
+                    <div id="modal-actions-section" class="mb-6">
                         <h3 class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2">The Actions</h3>
                         <ul id="modal-actions" class="text-slate-600 custom-list"></ul>
                     </div>
                     
-                    <div class="mb-6">
+                    <div id="modal-results-section" class="mb-6">
                         <h3 class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2">The Results</h3>
                         <ul id="modal-results" class="text-slate-600 custom-list"></ul>
                     </div>
@@ -306,6 +318,17 @@
 
             // --- Project Data ---
             const projectData = {
+                'mk12': {
+                    title: 'Mk. 12 Drivetrain Lead',
+                    cardDescription: "As the Drivetrain Lead on Bruin Formula Racing at UCLA, I owned the cradle-to-grave development of the drivetrain subsystem",
+                    modalDescription: "As the Drivetrain Lead on Bruin Formula Racing at UCLA, I owned the cradle-to-grave development of the drivetrain subsystem\n\nMk.12 is currently in the shop, but keep an eye out for some design review slides shortly!",
+                    skills: [],
+                    problem: [],
+                    actions: [],
+                    results: [],
+                    images: [],
+                    videos: []
+                },
                 'drivetrain': {
                     title: 'Mk 11 Drivetrain Sprocket Assembly',
                     cardDescription: "Designed and optimized the sprockets, motor shaft, chain, and chain guard.",
@@ -477,8 +500,11 @@
             const modalTitle = document.getElementById('modal-title');
             const modalDescription = document.getElementById('modal-description');
             const modalSkillsContainer = document.getElementById('modal-skills');
+            const modalProblemSection = document.getElementById('modal-problem-section');
             const modalProblemList = document.getElementById('modal-problem');
+            const modalActionsSection = document.getElementById('modal-actions-section');
             const modalActionsList = document.getElementById('modal-actions'); // NEW
+            const modalResultsSection = document.getElementById('modal-results-section');
             const modalResultsList = document.getElementById('modal-results');
             const modalMediaHeading = document.getElementById('media-heading');
             const modalMediaContainer = document.getElementById('modal-media');
@@ -505,6 +531,14 @@
                     skillTag.textContent = skill;
                     modalSkillsContainer.appendChild(skillTag);
                 });
+                modalSkillsContainer.classList.toggle('hidden', !(data.skills && data.skills.length));
+
+                const showSection = (section, items) => {
+                    section.classList.toggle('hidden', !(items && items.length));
+                };
+                showSection(modalProblemSection, data.problem);
+                showSection(modalActionsSection, data.actions);
+                showSection(modalResultsSection, data.results);
 
                 // Populate Problem list
                 data.problem?.forEach(item => {
