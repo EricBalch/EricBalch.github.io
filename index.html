@@ -278,7 +278,7 @@
 
                     <div>
                         <h3 id="media-heading" class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2 hidden">Media</h3>
-                        <div id="modal-media" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                        <div id="modal-media" class="grid grid-cols-3 gap-3 mt-4">
                             </div>
                     </div>
                 </div>
@@ -571,11 +571,13 @@
                     modalMediaHeading.classList.add('hidden');
                 }
                 
+                const mediaFrameClass = 'aspect-video w-full bg-slate-100 rounded-lg shadow-md';
+
                 data.images?.forEach(src => {
                     const img = document.createElement('img');
                     img.src = src;
                     img.alt = data.title;
-                    img.className = 'w-full rounded-lg shadow-md object-cover';
+                    img.className = mediaFrameClass + ' object-contain';
                     modalMediaContainer.appendChild(img);
                 });
                 
@@ -583,7 +585,7 @@
                     if (src.includes('youtube.com/embed') || src.includes('player.vimeo.com/video')) {
                         const iframe = document.createElement('iframe');
                         iframe.src = src;
-                        iframe.className = 'w-full aspect-video rounded-lg shadow-md';
+                        iframe.className = mediaFrameClass;
                         iframe.setAttribute('frameborder', '0');
                         iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen');
                         modalMediaContainer.appendChild(iframe);
@@ -591,7 +593,7 @@
                         const video = document.createElement('video');
                         video.src = src;
                         video.controls = true;
-                        video.className = 'w-full rounded-lg shadow-md';
+                        video.className = mediaFrameClass + ' object-contain';
                         video.playsInline = true;
                         modalMediaContainer.appendChild(video);
                     }
