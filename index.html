@@ -109,15 +109,17 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <div data-project-id="mk12" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
-                    <div class="flex items-center gap-2 px-3 py-1.5 bg-[#2774AE] text-white text-xs font-semibold">
-                        <img src="./logos/bruin-racing.png" alt="" class="h-5 w-5 object-contain rounded-sm bg-white p-0.5" onerror="this.remove()">
-                        <span>Bruin Racing</span>
-                    </div>
                     <div class="relative overflow-hidden">
                         <div class="w-full h-48 bg-slate-200 flex items-center justify-center px-6">
                             <p class="text-slate-600 font-medium text-center">Prototype in progress</p>
                         </div>
-                        <span class="absolute top-3 left-3 bg-slate-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full">In progress</span>
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-1.5">
+                            <span class="inline-flex items-center gap-1.5 bg-[#2774AE] text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                                <img src="./logos/bruin-racing.png" alt="" class="h-3.5 w-3.5 object-contain" onerror="this.remove()">
+                                Bruin Racing
+                            </span>
+                            <span class="bg-slate-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full">In progress</span>
+                        </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Mk. 12 Drivetrain Lead</h3>
@@ -127,12 +129,12 @@
                 </div>
 
                 <div data-project-id="drivetrain" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
-                    <div class="flex items-center gap-2 px-3 py-1.5 bg-[#2774AE] text-white text-xs font-semibold">
-                        <img src="./logos/bruin-racing.png" alt="" class="h-5 w-5 object-contain rounded-sm bg-white p-0.5" onerror="this.remove()">
-                        <span>Bruin Racing</span>
-                    </div>
                     <div class="relative overflow-hidden">
                         <img src="./Mk.11_Brake_Test_2.jpg" alt="Drivetrain sprocket assembly" class="w-full h-48 object-cover"> <!--sprocket_assembly_view3-->
+                        <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 bg-[#2774AE] text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                            <img src="./logos/bruin-racing.png" alt="" class="h-3.5 w-3.5 object-contain" onerror="this.remove()">
+                            Bruin Racing
+                        </span>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Drivetrain Sprocket Assembly</h3>
@@ -142,12 +144,12 @@
                 </div>
 
                 <div data-project-id="tensioner" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
-                    <div class="flex items-center gap-2 px-3 py-1.5 bg-[#2774AE] text-white text-xs font-semibold">
-                        <img src="./logos/bruin-racing.png" alt="" class="h-5 w-5 object-contain rounded-sm bg-white p-0.5" onerror="this.remove()">
-                        <span>Bruin Racing</span>
-                    </div>
                     <div class="relative overflow-hidden">
                         <img src="./tensioner_assembly_view.jpg" alt="Chain tensioner assembly" class="w-full h-48 object-cover">
+                        <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 bg-[#2774AE] text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                            <img src="./logos/bruin-racing.png" alt="" class="h-3.5 w-3.5 object-contain" onerror="this.remove()">
+                            Bruin Racing
+                        </span>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Chain Tensioner</h3>
@@ -157,12 +159,12 @@
                 </div>
 
                 <div data-project-id="parking" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
-                    <div class="flex items-center gap-2 px-3 py-1.5 bg-slate-700 text-white text-xs font-semibold">
-                        <img src="./logos/personal.png" alt="" class="h-5 w-5 object-contain rounded-sm bg-white p-0.5" onerror="this.remove()">
-                        <span>Personal Project</span>
-                    </div>
                     <div class="relative overflow-hidden">
                         <img src="./ultrasonic_sensor.jpg" alt="Ultrasonic parking sensor and display" class="w-full h-48 object-cover">
+                        <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 bg-slate-700 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                            <img src="./logos/personal.png" alt="" class="h-3.5 w-3.5 object-contain" onerror="this.remove()">
+                            Personal Project
+                        </span>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Mechatronics Parking Sensor</h3>
@@ -178,12 +180,12 @@
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">Research</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div data-project-id="coronary" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
-                    <div class="flex items-center gap-2 px-3 py-1.5 bg-[#8C1515] text-white text-xs font-semibold">
-                        <img src="./logos/stanford-cbcl.png" alt="" class="h-5 w-5 object-contain rounded-sm bg-white p-0.5" onerror="this.remove()">
-                        <span>Stanford CBCL</span>
-                    </div>
                      <div class="relative overflow-hidden">
                         <img src="./HealthyVStenosisVBypassFINAL.png" alt="Healthy, stenosed, and bypass coronary flow comparison" class="w-full h-48 object-cover">
+                        <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 bg-[#8C1515] text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                            <img src="./logos/stanford-cbcl.png" alt="" class="h-3.5 w-3.5 object-contain" onerror="this.remove()">
+                            Stanford CBCL
+                        </span>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Coronary Artery Graft</h3>
@@ -193,15 +195,17 @@
                 </div>
 
                 <div data-project-id="endoscope" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
-                    <div class="flex items-center gap-2 px-3 py-1.5 bg-slate-700 text-white text-xs font-semibold">
-                        <img src="./logos/personal.png" alt="" class="h-5 w-5 object-contain rounded-sm bg-white p-0.5" onerror="this.remove()">
-                        <span>Personal Project</span>
-                    </div>
                      <div class="relative overflow-hidden">
                         <div class="w-full h-48 bg-slate-200 flex items-center justify-center px-6">
                             <p class="text-slate-600 font-medium text-center">Prototype in progress</p>
                         </div>
-                        <span class="absolute top-3 left-3 bg-slate-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full">In progress</span>
+                        <div class="absolute top-3 left-3 flex flex-col items-start gap-1.5">
+                            <span class="inline-flex items-center gap-1.5 bg-[#2774AE] text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                                <img src="./logos/ucla-bionics.png" alt="" class="h-3.5 w-3.5 object-contain" onerror="this.remove()">
+                                UCLA Bionics Lab
+                            </span>
+                            <span class="bg-slate-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full">In progress</span>
+                        </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Endoscope Development Project</h3>
@@ -359,6 +363,11 @@
                     name: 'Personal Project',
                     logo: './logos/personal.png',
                     bannerClass: 'bg-slate-700 text-white'
+                },
+                'ucla-bionics': {
+                    name: 'UCLA Bionics Lab',
+                    logo: './logos/ucla-bionics.png',
+                    bannerClass: 'bg-[#2774AE] text-white'
                 }
             };
 
@@ -483,7 +492,7 @@
                     videos: []
                 },
                 'endoscope': {
-                    type: 'personal',
+                    type: 'ucla-bionics',
                     title: 'Endoscope Development Project',
                     cardDescription: "Developed innovative new endoscope tool design, decoupling the control of the camera and accessories.",
                     modalDescription: "This biomedical engineering project involved research, design, prototyping, and testing of an independently controlled endoscope tool assembly, capable of fitting into the working channel of currently existing endoscope and colonoscope designs.",
@@ -580,11 +589,11 @@
                 }
                 container.classList.remove('hidden');
                 const banner = document.createElement('div');
-                banner.className = `inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-semibold ${type.bannerClass}`;
+                banner.className = `inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold ${type.bannerClass}`;
                 const img = document.createElement('img');
                 img.src = type.logo;
                 img.alt = '';
-                img.className = 'h-5 w-5 object-contain rounded-sm bg-white p-0.5';
+                img.className = 'h-3.5 w-3.5 object-contain';
                 img.addEventListener('error', () => img.remove());
                 banner.appendChild(img);
                 const label = document.createElement('span');
