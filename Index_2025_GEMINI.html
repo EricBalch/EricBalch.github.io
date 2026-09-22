@@ -4,13 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric Balch Engineering Portfolio</title>
-    <meta name="description" content="Mechanical engineering portfolio of Eric Balch, UCLA. Drivetrain design, chain tension measurement, a parking-sensor prototype, and coronary graft flow analysis.">
-    <meta property="og:title" content="Eric Balch — Mechanical Engineering Portfolio">
-    <meta property="og:description" content="Mechanical engineering portfolio of Eric Balch, UCLA. Drivetrain design, chain tension measurement, a parking-sensor prototype, and coronary graft flow analysis.">
-    <meta property="og:image" content="https://ericbalch.github.io/sprocket_assembly_view3.png">
-    <meta property="og:url" content="https://ericbalch.github.io/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,9 +42,6 @@
             font-size: 0.8rem;
             line-height: 1.5rem;
         }
-        section[id] {
-            scroll-margin-top: 5.5rem;
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -65,8 +55,8 @@
                 <a href="#skills" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
                 <a href="#contact" class="text-slate-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-slate-700" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <button id="mobile-menu-button" class="md:hidden text-slate-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
@@ -94,7 +84,7 @@
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
                     <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 font-semibold">View Projects</a>
                     <a href="#contact" class="px-6 py-3 bg-slate-200 text-slate-800 rounded-lg shadow-md hover:bg-slate-300 transition-colors duration-300 font-semibold">Get In Touch</a>
-                    <a href="#" id="open-resume-btn" class="px-6 py-3 bg-slate-200 text-slate-800 rounded-lg shadow-md hover:bg-slate-300 transition-colors duration-300 font-semibold">View Resume</a>
+                    <a href="#" id="open-resume-btn" class="px-6 py-3 bg-slate-200 text-slate-800 rounded-lg shadow-md hover:bg-slate-300 transition-colors duration-300 font-semibold">View Resume 📝</a>
                 </div>
             </div>
             <div class="md:w-1/2 flex justify-center">
@@ -108,36 +98,39 @@
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div data-project-id="drivetrain" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
+                <div data-project-id="drivetrain" class="group bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
                     <div class="relative overflow-hidden">
-                        <img src="./sprocket_assembly_view3.png" alt="Drivetrain sprocket assembly" class="w-full h-48 object-cover">
+                        <img src="./sprocket_assembly_view3.png" alt="Photo of Drivetrain Assembly project" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-white bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Drivetrain Sprocket Assembly</h3>
-                        <p class="card-description text-slate-600 text-sm mb-4 min-h-[5rem]">Designed and optimized the sprockets, motor shaft, chain, and chain guard.</p>
-                        <span class="inline-block text-blue-600 font-semibold">View Details &rarr;</span>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Drivetrain Sprocket Assembly</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4"></p>
+                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
                     </div>
                 </div>
 
-                <div data-project-id="tensioner" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
+                <div data-project-id="tensioner" class="group bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
                     <div class="relative overflow-hidden">
-                        <img src="./tensioner_assembly_view.jpg" alt="Chain tensioner assembly" class="w-full h-48 object-cover">
+                        <img src="./tensioner_assembly_view.jpg" alt="Photo of Chain Tensioner" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-white bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Chain Tensioner</h3>
-                        <p class="card-description text-slate-600 text-sm mb-4 min-h-[5rem]">Designed a chain tensioning assembly to measure chain stretch during competition.</p>
-                        <span class="inline-block text-blue-600 font-semibold">View Details &rarr;</span>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Chain Tensioner</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4"></p>
+                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
                     </div>
                 </div>
-
-                <div data-project-id="parking" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
+                
+                <div data-project-id="parking" class="group bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
                     <div class="relative overflow-hidden">
-                        <img src="./ultrasonic_sensor.jpg" alt="Ultrasonic parking sensor and display" class="w-full h-48 object-cover">
+                        <img src="./ultrasonic_sensor.jpg" alt="Photo of Parking Sensor project" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-white bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Mechatronics Parking Sensor</h3>
-                        <p class="card-description text-slate-600 text-sm mb-4 min-h-[5rem]">Designed and prototyped an ultrasonic sensor network to create a smart parking system that guides drivers to available spaces, reducing lot congestion.</p>
-                        <span class="inline-block text-blue-600 font-semibold">View Details &rarr;</span>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Mechatronics Parking Sensor</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4"></p>
+                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -147,28 +140,27 @@
         <section id="research" class="mb-24">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">Research</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div data-project-id="coronary" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
+                <div data-project-id="coronary" class="group bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
                      <div class="relative overflow-hidden">
-                        <img src="./HealthyVStenosisVBypassFINAL.png" alt="Healthy, stenosed, and bypass coronary flow comparison" class="w-full h-48 object-cover">
+                        <img src="./HealthyVStenosisVBypassFINAL.png" alt="Photo of Coronary Artery Graft project" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-white bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Coronary Artery Graft</h3>
-                        <p class="card-description text-slate-600 text-sm mb-4 min-h-[5rem]">Ran CFD simulations using SimVascular to diagnose and bypass coronary artery stenosis.</p>
-                        <span class="inline-block text-blue-600 font-semibold">View Details &rarr;</span>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Coronary Artery Graft</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4"></p>
+                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
                     </div>
                 </div>
 
-                <div data-project-id="endoscope" role="button" tabindex="0" class="project-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-xl transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
+                <div data-project-id="endoscope" class="group bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
                      <div class="relative overflow-hidden">
-                        <div class="w-full h-48 bg-slate-200 flex items-center justify-center px-6">
-                            <p class="text-slate-600 font-medium text-center">Prototype in progress</p>
-                        </div>
-                        <span class="absolute top-3 left-3 bg-slate-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full">In progress</span>
+                        <img src="./white_background.png" alt="In Development" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-white bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Endoscope Development Project</h3>
-                        <p class="card-description text-slate-600 text-sm mb-4 min-h-[5rem]">Developed innovative new endoscope tool design, decoupling the control of the camera and accessories.</p>
-                        <span class="inline-block text-blue-600 font-semibold">View Details &rarr;</span>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 truncate">Endoscope Development Project</h3>
+                        <p class="card-description text-slate-600 text-sm mb-4"></p>
+                        <a href="#" class="open-modal-btn inline-block text-blue-600 hover:underline font-semibold">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -178,31 +170,31 @@
         <section id="skills" class="mb-24">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-12">My Skills</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
-                <div class="bg-white rounded-lg shadow-md p-6 hover:-translate-y-1 hover:shadow-lg transition duration-300">
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
                     <h4 class="text-lg font-semibold text-slate-900">Engineering Software</h4>
                     <p class="text-sm text-slate-600 mt-2">SolidWorks, Fusion 360, ANSYS Workbench, Altair Inspire</p>
                 </div> 
-                <div class="bg-white rounded-lg shadow-md p-6 hover:-translate-y-1 hover:shadow-lg transition duration-300">
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
                     <h4 class="text-lg font-semibold text-slate-900">Programming</h4>
                     <p class="text-sm text-slate-600 mt-2">Python, MATLAB, Java</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:-translate-y-1 hover:shadow-lg transition duration-300">
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
                     <h4 class="text-lg font-semibold text-slate-900">AI Tools</h4>
-                    <p class="text-sm text-slate-600 mt-2">Google Gemini, ChatGPT, Grok, Claude</p>
+                    <p class="text-sm text-slate-600 mt-2">Google Gemini, ChatGPT</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:-translate-y-1 hover:shadow-lg transition duration-300">
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
                     <h4 class="text-lg font-semibold text-slate-900">Analysis</h4>
-                    <p class="text-sm text-slate-600 mt-2">Finite Element Analysis (FEA), Computational Fluid Dynamics (CFD), Topology Optimization</p>
+                    <p class="text-sm text-slate-600 mt-2">Finite Element Analysis (FEA), Computation Fluid Dynamics (CFD), Topology Optimization</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:-translate-y-1 hover:shadow-lg transition duration-300">
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
                     <h4 class="text-lg font-semibold text-slate-900">Manufacturing</h4>
                     <p class="text-sm text-slate-600 mt-2">3D Printing, Mill, Lathe</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:-translate-y-1 hover:shadow-lg transition duration-300">
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
                     <h4 class="text-lg font-semibold text-slate-900">Mechatronics</h4>
                     <p class="text-sm text-slate-600 mt-2">Arduino, ESP32 Microcontrollers, Ultrasonic Sensors</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:-translate-y-1 hover:shadow-lg transition duration-300">
+                <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
                     <h4 class="text-lg font-semibold text-slate-900">Professional Software</h4>
                     <p class="text-sm text-slate-600 mt-2">Microsoft Office Suite (Word, Excel, Teams)</p>
                 </div>
@@ -215,15 +207,11 @@
                 <div class="text-center">
                     <p class="text-lg text-slate-600 mb-4">Find me on LinkedIn or send an Email:</p>
                     <div class="flex justify-center space-x-6">
-                        <a href="https://www.linkedin.com/in/eric-balch" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-blue-600 hover:text-blue-700 transition-colors duration-300">
-                            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
+                        <a href="https://www.linkedin.com/in/eric-balch" target="_blank" class="text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" class="w-10 h-10">
                         </a>
-                        <a href="mailto:erichbalch@gmail.com?subject=Reaching Out From Your Portfolio" aria-label="Email" class="text-blue-600 hover:text-blue-700 transition-colors duration-300">
-                            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
-                            </svg>
+                        <a href="mailto:erichbalch@gmail.com?subject=Reaching Out From Your Portfolio" class="text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                            <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Email" class="w-10 h-10">
                         </a>
                     </div>
                 </div>
@@ -233,7 +221,7 @@
 
     <footer class="bg-slate-900 text-white py-8">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2026 Eric Balch.</p>
+            <p>&copy; 2025 Eric Balch.</p>
         </div>
     </footer>
 
@@ -275,14 +263,11 @@
     </div>
 
     <div id="resume-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
-        <div class="bg-white rounded-lg shadow-2xl w-full max-w-4xl h-[90vh] flex flex-col relative">
-            <div class="flex items-center justify-between px-4 py-3 border-b border-slate-200">
-                <h2 class="text-lg font-semibold text-slate-900">Resume</h2>
-                <button id="close-resume-btn" class="text-slate-500 hover:text-slate-800 transition-colors" aria-label="Close resume viewer">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-            </div>
-            <iframe src="./Eric Balch - Resume.pdf#navpanes=0" title="Eric Balch resume" class="w-full flex-1 min-h-0 border-0 rounded-b-lg">
+        <div class="bg-white rounded-lg shadow-2xl w-full max-w-4xl h-[90vh] flex flex-col relative p-2">
+            <button id="close-resume-btn" class="absolute -top-3 -right-3 text-white bg-slate-800 rounded-full p-1 hover:bg-slate-600 transition-colors z-10" aria-label="Close resume viewer">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <iframe src="./Eric Balch - Resume.pdf#navpanes=0" class="w-full h-full border-8 border-white rounded-lg">
                 Your browser does not support PDFs. Please download the PDF to view it: <a href="./Eric Balch - Resume.pdf">Download PDF</a>.
             </iframe>
         </div>
@@ -294,14 +279,7 @@
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenuButton.addEventListener('click', () => {
-                const nowHidden = mobileMenu.classList.toggle('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', nowHidden ? 'false' : 'true');
-            });
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
-                });
+                mobileMenu.classList.toggle('hidden');
             });
 
             // --- Project Data ---
@@ -482,9 +460,9 @@
             const modalResultsList = document.getElementById('modal-results');
             const modalMediaHeading = document.getElementById('media-heading');
             const modalMediaContainer = document.getElementById('modal-media');
-            let lastFocusedElement = null;
+            const openModalBtns = document.querySelectorAll('.open-modal-btn');
 
-            const openModal = (projectId, trigger) => {
+            const openModal = (projectId) => {
                 const data = projectData[projectId];
                 if (!data) return;
 
@@ -559,34 +537,26 @@
                         video.controls = true;
                         video.className = 'w-full rounded-lg shadow-md';
                         video.playsInline = true;
+                        video.muted = true;
                         modalMediaContainer.appendChild(video);
                     }
                 });
 
                 modal.classList.remove('hidden');
                 document.body.classList.add('overflow-hidden');
-                lastFocusedElement = trigger || document.activeElement;
-                closeModalBtn.focus();
             };
 
             const closeModal = () => {
-                modal.querySelectorAll('video').forEach(video => video.pause());
                 modal.classList.add('hidden');
                 document.body.classList.remove('overflow-hidden');
-                if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
-                    lastFocusedElement.focus();
-                    lastFocusedElement = null;
-                }
             };
 
-            document.querySelectorAll('.project-card').forEach(card => {
-                const openFromCard = () => openModal(card.dataset.projectId, card);
-                card.addEventListener('click', openFromCard);
-                card.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        openFromCard();
-                    }
+            openModalBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const projectCard = btn.closest('[data-project-id]');
+                    const projectId = projectCard.dataset.projectId;
+                    openModal(projectId);
                 });
             });
 
@@ -603,19 +573,13 @@
             const closeResumeBtn = document.getElementById('close-resume-btn');
 
             const openResumeModal = () => {
-                lastFocusedElement = document.activeElement;
                 resumeModal.classList.remove('hidden');
                 document.body.classList.add('overflow-hidden');
-                closeResumeBtn.focus();
             };
 
             const closeResumeModal = () => {
                 resumeModal.classList.add('hidden');
                 document.body.classList.remove('overflow-hidden');
-                if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
-                    lastFocusedElement.focus();
-                    lastFocusedElement = null;
-                }
             };
 
             openResumeBtn.addEventListener('click', (e) => {
