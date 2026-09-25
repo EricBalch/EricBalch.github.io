@@ -307,6 +307,11 @@
                         <ul id="modal-results" class="text-slate-600 custom-list"></ul>
                     </div>
 
+                    <div id="modal-slides-section" class="mb-6 hidden">
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2">Design Review Slides</h3>
+                        <div id="modal-slides" class="mt-4"></div>
+                    </div>
+
                     <div>
                         <h3 id="media-heading" class="text-2xl font-semibold text-slate-800 mb-3 border-b-2 border-slate-200 pb-2 hidden">Media</h3>
                         <div id="modal-media" class="grid grid-cols-3 gap-3 mt-4">
@@ -385,6 +390,7 @@
                     results: [
                         "DEVELOPMENT IN PROGRESS"
                     ],
+                    slides: '', // Paste a Google Slides share or publish link.
                     images: [],
                     videos: []
                 },
@@ -411,6 +417,7 @@
                         "Decreased serviceability time for sprocket-motor assembly during competition and testing",
                         "Decreased manufacturing cost by greater than 25%"
                     ],
+                    slides: 'https://docs.google.com/presentation/d/1NolBN28RPPbvqtdyJo3Mn1hNmr3-fK8h9yqv2VSV2-E/edit?usp=sharing', // Paste a Google Slides share or publish link.
                     images: [
                         './sprocket_assembly_view3.png',
                         './sprocket_assembly_view_exploded.png',
@@ -576,6 +583,8 @@
             const modalActionsList = document.getElementById('modal-actions'); // NEW
             const modalResultsSection = document.getElementById('modal-results-section');
             const modalResultsList = document.getElementById('modal-results');
+            const modalSlidesSection = document.getElementById('modal-slides-section');
+            const modalSlides = document.getElementById('modal-slides');
             const modalMediaHeading = document.getElementById('media-heading');
             const modalMediaContainer = document.getElementById('modal-media');
             let lastFocusedElement = null;
@@ -600,6 +609,50 @@
                 label.textContent = type.name;
                 banner.appendChild(label);
                 container.appendChild(banner);
+            };
+
+            const googleSlidesEmbedUrl = (url) => {
+                if (!url || !url.trim()) return '';
+                try {
+                    const parsed = new URL(url.trim());
+                    if (parsed.hostname !== 'docs.google.com') return '';
+                    const published = parsed.pathname.match(/\/presentation\/d\/e\/([^/]+)/);
+                    if (published) {
+                        return `https://docs.google.com/presentation/d/e/${published[1]}/embed?start=false&loop=false&delayms=3000`;
+                    }
+                    const standard = parsed.pathname.match(/\/presentation\/d\/([^/]+)/);
+                    if (standard) {
+                        return `https://docs.google.com/presentation/d/${standard[1]}/embed?start=false&loop=false&delayms=3000`;
+                    }
+                } catch (error) {
+                    return '';
+                }
+                return '';
+            };
+
+            const renderSlides = (url) => {
+                modalSlides.replaceChildren();
+                const trimmed = (url || '').trim();
+                const embedUrl = googleSlidesEmbedUrl(trimmed);
+                if (!trimmed || !embedUrl) {
+                    modalSlidesSection.classList.add('hidden');
+                    return;
+                }
+                modalSlidesSection.classList.remove('hidden');
+                const iframe = document.createElement('iframe');
+                iframe.src = embedUrl;
+                iframe.title = 'Design review slides';
+                iframe.className = 'w-full aspect-video rounded-lg shadow-md bg-slate-100';
+                iframe.setAttribute('allowfullscreen', '');
+                iframe.setAttribute('allow', 'fullscreen');
+                modalSlides.appendChild(iframe);
+                const link = document.createElement('a');
+                link.href = trimmed;
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.className = 'inline-block mt-3 text-blue-600 font-semibold hover:underline';
+                link.textContent = 'Open the slideshow';
+                modalSlides.appendChild(link);
             };
 
             const openModal = (projectId, trigger) => {
@@ -632,6 +685,7 @@
                 showSection(modalProblemSection, data.problem);
                 showSection(modalActionsSection, data.actions);
                 showSection(modalResultsSection, data.results);
+                renderSlides(data.slides);
 
                 // Populate Problem list
                 data.problem?.forEach(item => {
