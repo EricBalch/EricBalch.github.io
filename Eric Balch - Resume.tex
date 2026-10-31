@@ -1,0 +1,238 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Eric Balch} \\ \vspace{1pt}
+    \small 650-447-9086 $|$ \href{mailto:erichbalch@gmail.com}{\underline{erichbalch@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/eric-balch}{\underline{linkedin.com/in/eric-balch}} $|$
+    \href{https://ericbalch.github.io/}{\underline{ericbalch.github.io}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Los Angeles}{Sept. 2024 -- June 2028}
+      {Bachelor of Science in Mechanical Engineering}{GPA: 3.95/4.0}
+      \resumeItemListStart
+        \resumeItem{Extracurriculars: Bruin Formula SAE Racing, Bionics Lab, Tau Beta Pi}
+      \resumeItemListEnd
+    %\resumeSubheading
+      %{Mountain View High School}{Aug. 2020 -- June 2024}
+      %{High School Diploma}{GPA: 4.70/4.0}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Mechanical Engineering Intern}{June 2026 -- Sept 2026}
+      {ANELLO Photonics Inc.}{Santa Clara, CA}
+      \resumeItemListStart
+        \resumeItem{Electromechanical design, development, assembly, \& testing of Inertial Navigation System calibration fixtures}
+        \resumeItem{Developed and released 16 custom machined and sheet-metal fixture elements through detailed design, structural analysis, and engineering drawings}
+        \resumeItem{Selection \& integration of high-precision motors and encoders for repeatable actuation}
+        \resumeItem{Developed 2D part \& assembly drawings w/ precise GD\&T callouts for manufacturing and internal documentation}
+        \resumeItem{Increased unit calibration throughput by 250\% while maintaining mG level performance accuracy}
+        \resumeItem{Designed breakout cable tester (KiCad) to validate harness function \& streamline manufacturing quality control}
+        
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Drivetrain Lead \& Responsible Engineer}{Oct. 2024 -- Present}
+      {Bruin Formula SAE Racing Drivetrain Team}{Los Angeles, CA}
+      \resumeItemListStart
+         \resumeItem{Directing drivetrain architecture, leading team of 20 through full design cycle}
+        \resumeItem{Designed (SolidWorks) front/rear sprockets and motor shaft w/ Design-for-Manufacture (DFM) emphasis}
+        \resumeItem{Reduced mass by $>$10\% \& reduced rotational inertia by 33\% through iterative nonlinear FEA testing (ANSYS) to optimize slotting}
+        \resumeItem{Developed GD\&T drawings \& communicate specs to local sponsors for outsourcing component manufacturing}
+        \resumeItem{Created and executed (F360 CAM) CNC toolpaths for manufacturing of motor shaft and motor mounts, reducing manufacturing costs by $>$25\%}
+        \resumeItem{Reduced in-house manufacturing time for drivetrain mounts by $>$20\% by transitioning from soft jaws to tabbing}
+        \resumeItem{Designed 80/20 assembly to stress test motor-to-sprocket chain (Up to 4500 N)}
+      \resumeItemListEnd
+  
+    \resumeSubheading
+      {Undergraduate Researcher}{Nov. 2025 -- Present}
+      {UCLA Bionics Laboratory}{Los Angeles, CA}
+      \resumeItemListStart
+        \resumeItem{Design (SolidWorks) endoscope with independently controlled camera and surgical accessories to improve polyp resection and ease of use for surgeons}
+        \resumeItem{Development of the housing and operational mechanism for the accessory attachment point}
+        \resumeItem{Rapid prototyping of designs using 3D printed components \& off-the-shelf tubing \& control wires}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Biomechanical Engineering Intern}{June 2023 -- Sept. 2023}
+      {Stanford University}{Stanford, CA}
+      \resumeItemListStart
+        \resumeItem{Developed computational fluid dynamics (CFD) simulation models of diseased coronary arteries}
+        \resumeItem{Ran CFD simulations evaluating grafts with complex BCs to consider the effects of multiple stenoses}
+        \resumeItem{Modeled pipeline for cardiovascular anatomic models of patient-specific coronary bypass procedures to analyze changing hemodynamics of different attachment locations}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Lifeguard and Swim Instructor}{June 2021 -- Sept. 2025}
+      {City of Mountain View}{Mountain View, CA}
+      \resumeItemListStart
+        \resumeItem{Head Guard leadership role supervising a staff of up to 5 lifeguards, CPR \& water rescue certified}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Relevant Projects}      
+    \resumeSubHeadingListStart
+    %  \resumeProjectHeading
+    %   {\textbf{Responsible Engineer, Bruin Formula SAE Racing Drivetrain Team} \emph{}}{Oct. 2024 -- June 2025}
+    %   \resumeItemListStart
+    %     \resumeItem{Designed (SolidWorks) 80/20 assembly to stress test motor-to-sprocket chain (Up to 4500 N)}
+    %     \resumeItem{FEA-tested (ANSYS Workbench) hook geometry strength; confirmed with manual calculations}
+    %   \resumeItemListEnd
+    
+     \resumeProjectHeading
+          {\textbf{Team Lead \& Lead Designer, Engineering Lab Course} \emph{}}{Sept. 2022 -- June 2024}
+          \resumeItemListStart
+            \resumeItem{Designed and built winning wireless car parking lot sensors \& display for CTE Capstone project}
+            \resumeItem{Designed and built winning robots for two Vex Robotics timed competitive challenges}
+            \resumeItem{Designed and built hydraulic arm to perform timed competitive precision challenges}
+            \resumeItem{Coordinated team member contributions and presented product design results to class}
+          \resumeItemListEnd     
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Software}{: SolidWorks, Fusion 360, ANSYS Mechanical, MS Office, Gemini, MATLAB, Python, Java, KiCad} \\
+     \textbf{Tools}{: Lathe \& Mill (CNC \& Manual), Drill Press, Band Saw, 3D Printer, Laser Cutter, Soldering}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
